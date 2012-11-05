@@ -130,6 +130,8 @@ class PluginStickytopics_ActionProfile extends PluginStickytopics_Inherit_Action
         {
             if (!$this->ACL_CanViewTopic($oUser,$oTopic))
                 unset($aStickyTopics[$key]);
+            else
+                $aStickyTopics[$key]->bStickyTopic=true;
         }
         $this->Viewer_Assign('aStickyTopics', $aStickyTopics);
         
