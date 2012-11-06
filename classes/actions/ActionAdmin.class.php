@@ -23,7 +23,7 @@ class PluginStickytopics_ActionAdmin extends PluginStickytopics_Inherit_ActionAd
 
     protected function EventStickyTopics()
     {
-        if (!$this->ACL_CanStickTopic($this->oUserCurrent, 'index', $oBlog))
+        if (!$this->ACL_CanStickTopic($this->oUserCurrent, 'index'))
         {
             return parent::EventNotFound();
         }
