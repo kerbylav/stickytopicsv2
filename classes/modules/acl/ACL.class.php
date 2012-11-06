@@ -22,7 +22,7 @@ class PluginStickytopics_ModuleACL extends PluginStickytopics_Inherit_ModuleACL
 	 * @param $iTargetId Id контейнера или сам контейнер для проверки
 	 * @return bool
 	 */
-    public function CanStickTopic(ModuleUser_EntityUser $oUser,$sTargetType,$iTargetId)
+    public function CanStickTopic(ModuleUser_EntityUser $oUser,$sTargetType=null,$iTargetId=null)
     {
         if (!$oUser)
             return false;
