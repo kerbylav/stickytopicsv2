@@ -95,7 +95,7 @@ class PluginStickytopics_ActionProfile extends PluginStickytopics_Inherit_Action
         if (!$this->oUserCurrent)
             return;
         
-        if (!$this->ACL_CanStickTopic($this->oUserProfile, 'personal', $oBlog))
+        if (!$this->ACL_CanStickTopic($this->oUserProfile, 'personal'))
         {
             return;
         }
