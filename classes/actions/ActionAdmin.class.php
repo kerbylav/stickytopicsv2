@@ -39,8 +39,6 @@ class PluginStickytopics_ActionAdmin extends PluginStickytopics_Inherit_ActionAd
         $this->Viewer_Assign('sTargetType', 'index');
         $this->Viewer_Assign('iTargetId', 0);
         
-        $this->Viewer_Assign('sStickyTemplatePath', $this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, ''));
-        $this->Viewer_Assign('sStickyTemplateWebPath', $this->PluginStickytopics_Stickytopics_GetTemplateFileWebPath(__CLASS__, ''));
         $this->Viewer_Assign('aTopic', $this->Topic_GetTopicsAdditionalData($aA));
         
         $this->Viewer_AppendStyle($this->PluginStickytopics_Stickytopics_GetTemplateFileWebPath(__CLASS__, 'css/style.css'));

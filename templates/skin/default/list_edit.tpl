@@ -4,7 +4,7 @@ ls.stickytopics.targetId={$iTargetId};
 </script>
 
 <div id='stickytopics_list'>
-{assign var=sTempPath value="`$sStickyTemplatePath`topic_list.tpl"}
+{hook run='st_assign_filepath' sFilename='topic_list.tpl' assign='sTempPath'}
 {include file=$sTempPath bStickyList=true}
 </div>
 

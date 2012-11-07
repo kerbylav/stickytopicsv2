@@ -85,8 +85,6 @@ class PluginStickytopics_ActionAjax extends PluginStickytopics_Inherit_ActionAja
         
         $oViewer->Assign('aTopic', $this->Topic_GetTopicsAdditionalData($aA));
         $oViewer->Assign('bStickyList', true);
-        $oViewer->Assign('sStickyTemplatePath', $this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, ''));
-        $oViewer->Assign('sStickyTemplateWebPath', $this->PluginStickytopics_Stickytopics_GetTemplateFileWebPath(__CLASS__, ''));
         
         $res=$oViewer->Fetch($this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, 'topic_list.tpl'));
         
@@ -148,8 +146,6 @@ class PluginStickytopics_ActionAjax extends PluginStickytopics_Inherit_ActionAja
         $oViewer=$this->Viewer_GetLocalViewer();
         
         $oViewer->Assign('aTopic', $aTopic['collection']);
-        $oViewer->Assign('sStickyTemplatePath', $this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, ''));
-        $oViewer->Assign('sStickyTemplateWebPath', $this->PluginStickytopics_Stickytopics_GetTemplateFileWebPath(__CLASS__, ''));
         
         $this->Viewer_AssignAjax('topicData', $oViewer->Fetch($this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, 'topic_list.tpl')));
     }

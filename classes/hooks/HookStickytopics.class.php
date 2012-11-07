@@ -24,6 +24,8 @@ class PluginStickytopics_HookStickytopics extends Hook
         $this->AddHook('template_menu_blog_edit_admin_item', 'AddBlogEditMenu');
         $this->AddHook('template_menu_profile_created_item', 'AddPersonalEditMenu');
         $this->AddHook('template_admin_action_item', 'AddAdminEditMenu');
+        $this->AddHook('template_st_assign_filepath', 'AssignFilePath');
+        $this->AddHook('template_st_assign_webpath', 'AssignWebPath');
     }
 
     public function AddBlogEditMenu($aParams)
@@ -51,6 +53,16 @@ class PluginStickytopics_HookStickytopics extends Hook
     {
         $res=$this->Viewer_Fetch($this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, 'admin_edit_menu.tpl'));
         return $res;
+    }
+
+    public function AssignFilePath($aParams)
+    {
+        return $this->PluginStickytopics_Stickytopics_GetTemplateFilePath(__CLASS__, $aParams['sFilename']);
+    }
+
+    public function AssignWebPath($aParams)
+    {
+        return $this->PluginStickytopics_Stickytopics_GetTemplateFileWebPath(__CLASS__, $aParams['sFilename']);
     }
 
 }
