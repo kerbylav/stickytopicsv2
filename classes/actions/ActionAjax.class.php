@@ -204,9 +204,9 @@ class PluginStickytopics_ActionAjax extends PluginStickytopics_Inherit_ActionAja
             return;
         }
         
-        if (in_array($oTopic->getBlogId(), $this->Blog_GetInaccessibleBlogsByUser()))
+        if (in_array($oTopic->getBlogId(), $this->Blog_GetInaccessibleBlogsByUser($this->oUserCurrent)))
         {
-            $this->Message_AddErrorSingle($this->Lang_Get('no_access'), $this->Lang_Get('error'));
+            $this->Message_AddErrorSingle($this->Lang_Get('not_access'), $this->Lang_Get('error'));
             return;
         }
         

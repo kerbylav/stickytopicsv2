@@ -55,12 +55,16 @@ class PluginStickytopics_ActionIndex extends PluginStickytopics_Inherit_ActionIn
             return;
         
         $aTopics=$aTopics->value;
-        
+
+        if (!is_array($aTopics))
+            $aTopics=array();
+
         foreach ($aTopics as $key => $oTopic)
         {
             if (in_array($oTopic->getId(), $aA))
                 unset($aTopics[$key]);
         }
+
         $aTopics=array_merge($aStickyTopics, $aTopics);
         
         $this->Viewer_Assign('aTopics', $aTopics);
