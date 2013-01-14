@@ -6,8 +6,8 @@
 *
 *--------------------------------------------------------
 *
-*   Official site: imthinker.ru/stickytopics2
-*   Contact e-mail: kerbylav@gmail.com
+*   Official site: http://kerbystudio.ru
+*   Contact e-mail:kerby@kerbystudio.ru
 *
 ---------------------------------------------------------
 */
